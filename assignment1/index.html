@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Assignment 1 - Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/app.css">
+
+    <script src="scripts/angular.min.js" charset="utf-8"></script>
+    <script src="scripts/app.js" charset="utf-8"></script>
+
+  </head>
+<body ng-app="LunchCheck">
+   <div class="container" ng-controller="LunchCheckController">
+     <h1>Lunch Checker</h1>
+
+         <div class="form-group">
+             <input id="lunch-menu" type="text"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control" ng-model="lunchItems" ng-class="msg_ok ? 'input_green' : 'input_red'">
+         </div>
+         <div class="note">
+           NOTE: Items like ",," or ", ," are considered empty and discarded while calculation.
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default" ng-click="checkIfTooMuch()">Check If Too Much</button>
+         </div>
+         <div class="form-group message" ng-class="msg_ok ? 'green' : 'red'">
+           <!-- Your message can go here. -->
+           {{message}}
+         </div>
+   </div>
+
+</body>
+</html>

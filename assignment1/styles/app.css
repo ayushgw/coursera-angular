@@ -1,0 +1,25 @@
+body{
+  background: #D3DCE5;
+}
+.note{
+  margin: 0px 10px 10px 10px;
+  font-size: 13px;
+  font-style: italic;
+}
+.message{
+  font-size: 1.3em; font-weight: bold;
+}
+.green{
+  color: green;
+}
+.red{
+  color: red;
+}
+.input_green{
+  border-width: medium;
+  border-color: green;
+}
+.input_red{
+  border-width: medium;
+  border-color: red;
+}
