@@ -1,0 +1,32 @@
+<div class="column" ng-if="foundItems.length">
+  <hr>
+  <div class="showing">Showing Results For: {{foundItems['searchTerm']}} ({{foundItems.length}} Results)</div>
+
+  <div class="items_list">
+    <table class="table">
+      <thead>
+        <tr class="row">
+          <th>Item Name</th>
+          <th class="col-md-2">Short Name</th>
+          <th>Description</th>
+          <th class="col-md-2"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row" ng-repeat="item in foundItems">
+          <td>{{item.name}}</td>
+          <td class="col-md-2">{{item.short_name}}</td>
+          <td>{{item.description}}</td>
+          <td class="col-md-2">
+            <button type="button" name="button" class="custom_btn" ng-click="onRemove({index: $index});">Don't want this one!</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row" ng-if="!foundItems.length">
+  <hr>
+  <div class="red">Nothing found!</div>
+</div>
