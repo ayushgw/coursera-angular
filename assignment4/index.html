@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Restaurant Menu App</title>
+</head>
+<body ng-app="MenuApp">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      Restaurant Menu App
+    </div>
+
+    <!-- View -->
+    <ui-view ng-show="!showSpinner"></ui-view>
+
+    <!-- Spinner -->
+    <spinner ng-show="showSpinner"></spinner>
+
+  </div>
+
+  <!-- Libraries -->
+  <script src="lib/angular.min.js" charset="utf-8"></script>
+  <script src="lib/angular-ui-router.min.js" charset="utf-8"></script>
+
+  <!-- Modules -->
+  <script src="src/menuapp/menuapp.module.js" charset="utf-8"></script>
+  <script src="src/data/data.module.js" charset="utf-8"></script>
+  <script src="src/spinner/spinner.module.js" charset="utf-8"></script>
+
+  <!-- 'MenuApp' module artifacts -->
+  <script src="src/menuapp/menuapp.routes.js" charset="utf-8"></script>
+  <script src="src/menuapp/menuapp.categories.controller.js" charset="utf-8"></script>
+  <script src="src/menuapp/menuapp.items.controller.js" charset="utf-8"></script>
+
+  <!-- 'data' module artifacts -->
+  <script src="src/data/menudata.service.js" charset="utf-8"></script>
+  <script src="src/data/components/category-list/categoryList.component.js" charset="utf-8"></script>
+  <script src="src/data/components/item-list/itemList.component.js" charset="utf-8"></script>
+
+  <!-- 'spinner' module artifacts -->
+  <script src="src/spinner/spinner.component.js" charset="utf-8"></script>
+
+</body>
+</html>
